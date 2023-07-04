@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [{
+  path: '',
+  pathMatch: 'full',
+  redirectTo: '/homepage'
+},{
+  path: '**',
+  loadChildren: () => import('./core/pages/not-found/not-found.module').then(m => m.NotFoundModule)
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
