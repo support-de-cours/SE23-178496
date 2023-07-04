@@ -1,1 +1,13 @@
-<p>Books index works!</p>
+<h2>Nos livres</h2>
+
+<ng-container *ngIf="!books.length; else BooksList">
+    Books loading...
+</ng-container>
+
+<ng-template #BooksList>
+<ul>
+    <li *ngFor="let book of books;let i = index">
+        {{ i }} - xxxx
+    </li>
+</ul>
+</ng-template>
