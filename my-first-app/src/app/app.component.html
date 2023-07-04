@@ -1,0 +1,24 @@
+<h1>My First App</h1>
+
+
+<app-lifecycle-exemple [title]="'LifeCycle Example'"></app-lifecycle-exemple>
+<app-lifecycle-exemple [title]="message"></app-lifecycle-exemple>
+
+
+<h2>DataBinding</h2>
+<div>{{ message }}</div>
+
+
+<h3>PropertyBinding</h3>
+<img [src]="image_source" alt="">
+<p [innerText]="message"></p>
+
+
+<h3>EventBinding</h3>
+<button type="button" (click)="changeMessage()">Change Message</button>
+
+
+<h3>TwoWayBinding</h3>
+<div>{{ username }}</div>
+<div [innerHTML]="username"></div>
+<input type="text" [(ngModel)]="username">
