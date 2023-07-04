@@ -13,6 +13,7 @@ export class LifecycleExempleComponent implements OnInit, OnChanges, DoCheck, Af
 
   constructor() {
     console.log('Constructor');
+    // this.title = "azertyu";
   }
 
   ngOnChanges() {
